@@ -15,8 +15,9 @@ bundle install
 
 # Add bin to path if using thoughtbot dotfiles:
 # http://goo.gl/CPzari
-mkdir .git/safe
+if [ ! -d .git/safe ]; then
+  mkdir .git/safe
+fi
 
 # Set up the database
 bundle exec rake db:setup
-bundle exec rake db:test:prepare

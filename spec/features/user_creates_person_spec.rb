@@ -2,6 +2,12 @@ require "rails_helper"
 
 feature "user creates person" do
   scenario "with valid data" do
-    pending "Use Capybara to create a new person"
+    visit new_person_url
+
+    fill_in "First name", with: "Clementine"
+    click_button "Create Person"
+
+    expect(page).to have_content("Person created.")
+    expect(page).to have_content("Clementine")
   end
 end
