@@ -11,7 +11,7 @@ if ! command -v bundle > /dev/null; then
   gem install bundler --no-document --pre
 fi
 
-bundle install
+bundle _1.5.1_ install
 
 # Add bin to path if using thoughtbot dotfiles:
 # http://goo.gl/CPzari
